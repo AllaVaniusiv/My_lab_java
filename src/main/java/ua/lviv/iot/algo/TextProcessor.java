@@ -4,12 +4,12 @@ package ua.lviv.iot.algo;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Text {
+public class TextProcessor {
 
     private String text;
     private int length;
 
-    public Text(final String text, final int length) {
+    public TextProcessor(final String text, final int length) {
         this.text = text;
         this.length = length;
     }
@@ -35,8 +35,8 @@ public class Text {
         String text = args[0];
         int length = Integer.parseInt(args[1]);
 
-        Text texts = new Text(text, length);
-        String result = texts.removeWordsWithConsonant();
+        TextProcessor processor = new TextProcessor(text, length);
+        String result = processor.removeWordsWithConsonant();
         System.out.println(result);
     }
 }
